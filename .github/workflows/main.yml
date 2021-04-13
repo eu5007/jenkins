@@ -45,5 +45,7 @@ jobs:
            push: true
            tag: ${{ secrets.DOCKER_HUB_USERNAME }}/simplewhale:latest
            
-       - name: Image digest
-         run: echo ${{ step.docker_build.output.digest }}
+      - name: Image digest
+        run: echo ${{ step.docker_build.outputs.digest }}
+          
+      
